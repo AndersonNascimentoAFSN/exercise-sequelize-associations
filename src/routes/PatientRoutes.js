@@ -4,6 +4,6 @@ const route = express.Router();
 
 const PatientController = require('../controllers/PatientController');
 
-route.get('/', PatientController.findAllPatients);
+route.get('/', PatientController.findAllPatientsWithPlan);
 
 module.exports = route;

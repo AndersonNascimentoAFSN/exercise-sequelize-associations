@@ -1,17 +1,17 @@
 const { Patient, Plan } = require('../models');
 
-const findAllPatients = async () => {
+const findAllPatientsWithPlan = async () => {
   // const patients = await Patient.findAll();
-  // const patients = await Patient.findAll({
-  //   include: [{ model: Plan, as: 'plans', attributes: { exclude: 'plan_id'}}],
-  // });
   const patients = await Patient.findAll({
-    include: { model: Plan, as: 'plans' } 
+    include: [{ model: Plan, as: 'plan', attributes: { exclude: 'planId'}}],
   });
+  // const patients = await Patient.findAll({
+  //   include: { model: Plan, as: 'plan' } 
+  // });
 
   return patients;
 }
 
 module.exports = {
-  findAllPatients,
+  findAllPatientsWithPlan,
 }

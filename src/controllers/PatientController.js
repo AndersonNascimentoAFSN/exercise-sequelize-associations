@@ -1,8 +1,8 @@
 const PatientService = require('../services/PatientService');
 
-const findAllPatients = async (_req, res) => {
+const findAllPatientsWithPlan = async (_req, res) => {
   try {
-    const patients = await PatientService.findAllPatients();
+    const patients = await PatientService.findAllPatientsWithPlan();
     return res.status(200).json(patients);
   } catch (err) {
     console.log(err.message);
@@ -11,5 +11,5 @@ const findAllPatients = async (_req, res) => {
 }
 
 module.exports = {
-  findAllPatients,
+  findAllPatientsWithPlan,
 }
