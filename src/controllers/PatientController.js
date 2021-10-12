@@ -41,9 +41,22 @@ const findAllPatientsForPlanId = async (req, res) => {
   }
 }
 
+const createPatient = async (req, res) => {
+ try {
+   const { fullName, planId } = req.body;
+   const createdPatient = await PatientService.createPatient({ fullName, planId });
+
+   res.status(201).json(createdPatient);
+ } catch (err) {
+    console.log(err.message);
+    res.status(500).json({message: err.message});
+ }
+}
+
 module.exports = {
   findAllPatientsWithPlan,
   findAllPatientsWithSurgeries,
   findAllPatientsForPlanId,
   findAllPatients,
+  createPatient,
 }

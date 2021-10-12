@@ -32,9 +32,15 @@ const findAllPatientsForPlanId = async (id) => {
   return patients;
 }
 
+const createPatient = async (newPatientData) => {
+  const createdPatient = await Patient.create(newPatientData);
+  return createdPatient;
+}
+
 module.exports = {
   findAllPatientsWithPlan,
   findAllPatientsWithSurgeries,
   findAllPatientsForPlanId,
   findAllPatients,
+  createPatient,
 }
