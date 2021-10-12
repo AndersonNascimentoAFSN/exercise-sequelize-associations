@@ -8,17 +8,25 @@ module.exports = {
         {
           coverage: 'Total',
           price: 549.99,
+          created_at: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updated_at: Sequelize.literal('CURRENT_TIMESTAMP'),
         },        {
           coverage: 'Partial',
           price: 349.99,
+          created_at: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updated_at: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
         {
           coverage: 'Emergencies only',
           price: 109.99,
+          created_at: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updated_at: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
         {
           coverage: 'Family',
           price: 949.99,
+          created_at: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updated_at: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
       ],
       {}
