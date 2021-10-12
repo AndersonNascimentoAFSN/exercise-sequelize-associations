@@ -6,23 +6,33 @@ module.exports = {
       'Patients',
       [
         {
-          fullname: 'Alberto Dos Santos',
+          full_name: 'Alberto Dos Santos',
           plan_id: 1,
+          created_at: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updated_at: Sequelize.literal('CURRENT_TIMESTAMP'),
         },        {
-          fullname: 'Maria Silveira Rodrigues',
+          full_name: 'Maria Silveira Rodrigues',
           plan_id: 3,
+          created_at: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updated_at: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
         {
-          fullname: 'Osvaldo de Andrade',
+          full_name: 'Osvaldo de Andrade',
           plan_id: 3,
+          created_at: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updated_at: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
         {
-          fullname: 'Cristiano Ronaldo Messi',
+          full_name: 'Cristiano Ronaldo Messi',
           plan_id: 2,
+          created_at: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updated_at: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
         {
-          fullname: 'Luis Carlos Suarez',
+          full_name: 'Luis Carlos Suarez',
           plan_id: 3,
+          created_at: Sequelize.literal('CURRENT_TIMESTAMP'),
+          updated_at: Sequelize.literal('CURRENT_TIMESTAMP'),
         },
       ],
       {}
